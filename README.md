@@ -1,61 +1,143 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# BelajarKu - AI-Powered Learning Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-11.x-red?style=flat-square&logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.2+-blue?style=flat-square&logo=php)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## About Laravel
+**BelajarKu** adalah aplikasi Learning Management System (LMS) yang didukung oleh AI untuk membantu pengguna mengelola pembelajaran mereka dengan lebih efektif. Aplikasi ini menyediakan fitur roadmap pembelajaran yang dipersonalisasi, pelacakan tujuan, dan integrasi AI untuk rekomendasi belajar.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **🎯 Goal Management**: Kelola tujuan pembelajaran dengan milestone dan tasks
+- **🗺️ AI Roadmap**: Dapatkan roadmap pembelajaran yang dipersonalisasi menggunakan AI (Gemini)
+- **📚 Study Sessions**: Lacak sesi belajar dengan mood tracking
+- **📝 Journal**: Catat refleksi dan progress pembelajaran
+- **📊 Progress Tracking**: Visualisasi kemajuan learning dengan grafik dan statistik
+- **🔐 User Authentication**: Sistem registrasi dan login yang aman
+- **📱 Responsive Design**: Antarmuka yang responsif menggunakan Tailwind CSS
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🛠️ Tech Stack
 
-## Learning Laravel
+- **Backend**: Laravel 11.x
+- **Frontend**: Blade Templates + Tailwind CSS + Alpine.js
+- **Database**: SQLite (development) / MySQL (production)
+- **AI Integration**: Google Gemini API
+- **Authentication**: Laravel Breeze
+- **Build Tools**: Vite
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 📦 Instalasi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Prerequisites
+- PHP 8.2 atau lebih tinggi
+- Composer
+- Node.js & NPM
+- SQLite atau MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Langkah Instalasi
 
-## Laravel Sponsors
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/yourusername/belajarku.git
+   cd belajarku
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+2. **Install dependencies**
+   ```bash
+   composer install
+   npm install
+   ```
 
-### Premium Partners
+3. **Setup environment**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+4. **Konfigurasi database**
+   - Edit file `.env` dan sesuaikan pengaturan database
+   - Untuk development, sudah dikonfigurasi menggunakan SQLite
 
-## Contributing
+5. **Jalankan migrasi**
+   ```bash
+   php artisan migrate
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. **Build assets**
+   ```bash
+   npm run dev
+   ```
 
-## Code of Conduct
+7. **Jalankan server**
+   ```bash
+   php artisan serve
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🔧 Konfigurasi AI
 
-## Security Vulnerabilities
+Untuk menggunakan fitur AI Roadmap, tambahkan API key Gemini di file `.env`:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
 
-## License
+## 📁 Struktur Database
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Models
+- **User**: Data pengguna
+- **Goal**: Tujuan pembelajaran
+- **Milestone**: Pencapaian dalam goal
+- **Task**: Tugas-tugas spesifik
+- **StudySession**: Sesi belajar dengan durasi
+- **Mood**: Tracking mood selama belajar
+- **Journal**: Catatan refleksi
+
+## 🎮 Cara Penggunaan
+
+1. **Registrasi/Login** ke aplikasi
+2. **Buat Goal** baru untuk pembelajaran
+3. **Generate Roadmap** menggunakan AI
+4. **Lacak Progress** melalui tasks dan milestones
+5. **Record Study Sessions** dengan mood tracking
+6. **Tulis Journal** untuk refleksi
+
+## 🧪 Testing
+
+Jalankan unit tests:
+```bash
+php artisan test
+```
+
+## 📝 API Endpoints
+
+### AI Endpoints
+- `POST /api/ai/roadmap` - Generate learning roadmap
+- `POST /api/ai/assistant` - AI assistant chat
+
+### Goal Management
+- `GET /api/goals` - List all goals
+- `POST /api/goals` - Create new goal
+- `PUT /api/goals/{id}` - Update goal
+- `DELETE /api/goals/{id}` - Delete goal
+
+## 🤝 Contributing
+
+1. Fork repository
+2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
+
+## 📄 License
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+## 👥 Authors
+
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+
+## 🙏 Acknowledgments
+
+- Laravel framework untuk foundation yang solid
+- Google Gemini untuk AI capabilities
+- Tailwind CSS untuk styling yang elegant
+- Komunitas open source yang supportif
