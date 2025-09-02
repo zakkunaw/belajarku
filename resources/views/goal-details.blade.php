@@ -51,16 +51,16 @@
                             class="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                         <span x-text="viewMode === 'roadmap' ? 'List View' : 'Roadmap View'"></span>
                     </button>
-                    <button onclick="window.history.back()" 
-                            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                        Edit Goal
-                    </button>
+                    <a href="{{ route('goals') }}" 
+                       class="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Back to Goals
+                    </a>
                 </div>
             </div>
             
             <!-- Progress Bar -->
             <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                <div class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: {{ $goal->progress_percentage }}%"></div>
+                <div class="bg-blue-600 h-3 rounded-full transition-all duration-300" :style="`width: {{ $goal->progress_percentage }}%`"></div>
             </div>
         </div>
 
@@ -85,7 +85,7 @@
                                     <span class="font-medium">{{ $progress['completed'] }}/{{ $progress['total'] }} completed</span>
                                 </div>
                                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300" style="width: {{ $progress['percentage'] }}%"></div>
+                                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300" :style="`width: {{ $progress['percentage'] }}%`"></div>
                                 </div>
                             </div>
                             @endif
@@ -190,7 +190,7 @@
                                     <span class="font-medium">{{ $progress['percentage'] }}%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300" style="width: {{ $progress['percentage'] }}%"></div>
+                                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300" :style="`width: {{ $progress['percentage'] }}%`"></div>
                                 </div>
                             </div>
                             @endif

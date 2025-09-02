@@ -47,7 +47,7 @@
             <p class="text-gray-600 dark:text-gray-400">Track your learning journey with AI-powered insights</p>
         </div>
         <div class="flex space-x-3">
-            <button @click="showAIAssistant = true" 
+            <button @click="showAIModal = true" 
                     class="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg shadow-sm transition duration-150 ease-in-out">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -127,7 +127,7 @@
                                 <span class="text-sm text-blue-600 dark:text-blue-400 font-semibold">{{ $goal->progress_percentage }}%</span>
                             </div>
                             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                                <div class="bg-gradient-to-r from-blue-500 to-green-500 h-3 rounded-full transition-all duration-500 ease-out" style="width: {{ $goal->progress_percentage }}%"></div>
+                                <div class="bg-gradient-to-r from-blue-500 to-green-500 h-3 rounded-full transition-all duration-500 ease-out" :style="`width: {{ $goal->progress_percentage }}%`"></div>
                             </div>
                         </div>
                         @endif
@@ -325,7 +325,7 @@
                                             <span class="text-sm font-bold text-blue-600 dark:text-blue-400">{{ $progress['completed'] }}/{{ $progress['total'] }} tasks ({{ $progress['percentage'] }}%)</span>
                                         </div>
                                         <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
-                                            <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: {{ $progress['percentage'] }}%"></div>
+                                            <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" :style="`width: {{ $progress['percentage'] }}%`"></div>
                                         </div>
                                     </div>
                                 @endif
@@ -521,7 +521,7 @@
                                 <span class="font-medium">{{ $progress['completed'] }}/{{ $progress['total'] }} tasks</span>
                             </div>
                             <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div class="bg-green-500 h-2 rounded-full transition-all duration-300" style="width: {{ $progress['percentage'] }}%"></div>
+                                <div class="bg-green-500 h-2 rounded-full transition-all duration-300" :style="`width: {{ $progress['percentage'] }}%`"></div>
                             </div>
                         </div>
                         @endif

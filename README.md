@@ -8,69 +8,76 @@
 
 ## 🚀 Fitur Utama
 
-- **🎯 Goal Management**: Kelola tujuan pembelajaran dengan milestone dan tasks
-- **🗺️ AI Roadmap**: Dapatkan roadmap pembelajaran yang dipersonalisasi menggunakan AI (Gemini)
-- **📚 Study Sessions**: Lacak sesi belajar dengan mood tracking
-- **📝 Journal**: Catat refleksi dan progress pembelajaran
-- **📊 Progress Tracking**: Visualisasi kemajuan learning dengan grafik dan statistik
-- **🔐 User Authentication**: Sistem registrasi dan login yang aman
-- **📱 Responsive Design**: Antarmuka yang responsif menggunakan Tailwind CSS
+-   **🎯 Goal Management**: Kelola tujuan pembelajaran dengan milestone dan tasks
+-   **🗺️ AI Roadmap**: Dapatkan roadmap pembelajaran yang dipersonalisasi menggunakan AI (Gemini)
+-   **📚 Study Sessions**: Lacak sesi belajar dengan mood tracking
+-   **📝 Journal**: Catat refleksi dan progress pembelajaran
+-   **📊 Progress Tracking**: Visualisasi kemajuan learning dengan grafik dan statistik
+-   **🔐 User Authentication**: Sistem registrasi dan login yang aman
+-   **📱 Responsive Design**: Antarmuka yang responsif menggunakan Tailwind CSS
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Laravel 11.x
-- **Frontend**: Blade Templates + Tailwind CSS + Alpine.js
-- **Database**: SQLite (development) / MySQL (production)
-- **AI Integration**: Google Gemini API
-- **Authentication**: Laravel Breeze
-- **Build Tools**: Vite
+-   **Backend**: Laravel 11.x
+-   **Frontend**: Blade Templates + Tailwind CSS + Alpine.js
+-   **Database**: SQLite (development) / MySQL (production)
+-   **AI Integration**: Google Gemini API
+-   **Authentication**: Laravel Breeze
+-   **Build Tools**: Vite
 
 ## 📦 Instalasi
 
 ### Prerequisites
-- PHP 8.2 atau lebih tinggi
-- Composer
-- Node.js & NPM
-- SQLite atau MySQL
+
+-   PHP 8.2 atau lebih tinggi
+-   Composer
+-   Node.js & NPM
+-   SQLite atau MySQL
 
 ### Langkah Instalasi
 
 1. **Clone repository**
-   ```bash
-   git clone https://github.com/yourusername/belajarku.git
-   cd belajarku
-   ```
+
+    ```bash
+    git clone https://github.com/yourusername/belajarku.git
+    cd belajarku
+    ```
 
 2. **Install dependencies**
-   ```bash
-   composer install
-   npm install
-   ```
+
+    ```bash
+    composer install
+    npm install
+    ```
 
 3. **Setup environment**
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
+
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
 4. **Konfigurasi database**
-   - Edit file `.env` dan sesuaikan pengaturan database
-   - Untuk development, sudah dikonfigurasi menggunakan SQLite
+
+    - Edit file `.env` dan sesuaikan pengaturan database
+    - Untuk development, sudah dikonfigurasi menggunakan SQLite
 
 5. **Jalankan migrasi**
-   ```bash
-   php artisan migrate
-   ```
+
+    ```bash
+    php artisan migrate
+    ```
 
 6. **Build assets**
-   ```bash
-   npm run dev
-   ```
+
+    ```bash
+    npm run dev
+    ```
 
 7. **Jalankan server**
-   ```bash
-   php artisan serve
-   ```
+    ```bash
+    php artisan serve
+    ```
 
 ## 🔧 Konfigurasi AI
 
@@ -83,13 +90,14 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ## 📁 Struktur Database
 
 ### Models
-- **User**: Data pengguna
-- **Goal**: Tujuan pembelajaran
-- **Milestone**: Pencapaian dalam goal
-- **Task**: Tugas-tugas spesifik
-- **StudySession**: Sesi belajar dengan durasi
-- **Mood**: Tracking mood selama belajar
-- **Journal**: Catatan refleksi
+
+-   **User**: Data pengguna
+-   **Goal**: Tujuan pembelajaran
+-   **Milestone**: Pencapaian dalam goal
+-   **Task**: Tugas-tugas spesifik
+-   **StudySession**: Sesi belajar dengan durasi
+-   **Mood**: Tracking mood selama belajar
+-   **Journal**: Catatan refleksi
 
 ## 🎮 Cara Penggunaan
 
@@ -103,6 +111,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ## 🧪 Testing
 
 Jalankan unit tests:
+
 ```bash
 php artisan test
 ```
@@ -110,14 +119,16 @@ php artisan test
 ## 📝 API Endpoints
 
 ### AI Endpoints
-- `POST /api/ai/roadmap` - Generate learning roadmap
-- `POST /api/ai/assistant` - AI assistant chat
+
+-   `POST /api/ai/roadmap` - Generate learning roadmap
+-   `POST /api/ai/assistant` - AI assistant chat
 
 ### Goal Management
-- `GET /api/goals` - List all goals
-- `POST /api/goals` - Create new goal
-- `PUT /api/goals/{id}` - Update goal
-- `DELETE /api/goals/{id}` - Delete goal
+
+-   `GET /api/goals` - List all goals
+-   `POST /api/goals` - Create new goal
+-   `PUT /api/goals/{id}` - Update goal
+-   `DELETE /api/goals/{id}` - Delete goal
 
 ## 🤝 Contributing
 
@@ -133,11 +144,11 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+-   **Your Name** - _Initial work_ - [YourGitHub](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
-- Laravel framework untuk foundation yang solid
-- Google Gemini untuk AI capabilities
-- Tailwind CSS untuk styling yang elegant
-- Komunitas open source yang supportif
+-   Laravel framework untuk foundation yang solid
+-   Google Gemini untuk AI capabilities
+-   Tailwind CSS untuk styling yang elegant
+-   Komunitas open source yang supportif

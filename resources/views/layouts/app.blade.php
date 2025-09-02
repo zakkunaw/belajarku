@@ -208,6 +208,13 @@
 
     <!-- Page Content -->
     <main class="max-w-5xl mx-auto p-4">
+        <!-- Header Section -->
+        @hasSection('header')
+        <header class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-6">
+            @yield('header')
+        </header>
+        @endif
+
         <!-- Flash Messages -->
         @if (session('status'))
             <div class="mb-4 p-4 rounded-md bg-green-50 dark:bg-green-900 border border-green-200 dark:border-green-800">
